@@ -172,9 +172,9 @@ header nav .list-darkmode-menu .hamburger.active .bar {
 .home {
   background: var(--bg-color);
   position: relative;
-  top: 0;
+  top: 90px;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   z-index: 1;
   padding: 300px 0 50px;
   padding-top: 120px;
