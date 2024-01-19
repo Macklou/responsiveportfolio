@@ -32,7 +32,7 @@ darkModeButton.addEventListener("change", () => {
 // Multiple Text
 
 const typed = new Typed(".multiple", {
-  strings: ["Front-End Developer", "Web Designer", "Youtuber"],
+  strings: ["Front-End Developer", "Web Designer", "Coder"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
