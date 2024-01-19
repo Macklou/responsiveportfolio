@@ -413,7 +413,7 @@ header nav .list-darkmode-menu .hamburger.active .bar {
   }
 }
 body {
-  margin: 10;
+  margin: 0;
   padding: 0px;
   box-sizing: border-box;
 }
