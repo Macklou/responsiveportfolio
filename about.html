@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Front End Developer Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#"><span>Louise</span> Charlotte</a>
+          </div>
+          <div class="list-darkmode-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Skills</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <label class="mode">
+              <input type="checkbox" checked="checked" id="darkModeButton" />
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-moon"></i>
+            </label>
+            <button class="hamburger">
+              <div class="bar"></div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left box with "Let's Connect" section -->
+        <div class="col-md-3" id="left-box">
+          <section id="connect" class="mt-5">
+            <h2 class="text-center">Let's Connect</h2>
+            <div class="social-links text-center">
+              <a href="https://github.com/Macklou" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://www.tiktok.com/@charlottelouisecodes"
+                target="_blank"
+              >
+                <i class="fab fa-tiktok"></i> TikTok
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right box with content -->
+        <div class="col-md-9 content">
+          <!-- Your existing content goes here -->
+          <div class="about-header text-center">Hi, I am Louise Charlotte</div>
+
+          <img
+            src="images/picture.jpeg"
+            alt="Louise Charlotte"
+            class="about-circle-photo"
+          />
+
+          <h2 class="text-center">Front-end developer</h2>
+
+          <div class="about-paragraphs text-center">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              aperiam provident tempora? Cumque adipisci, non dolorem quia, odit
+              qui alias veniam excepturi rem dolor fugit dignissimos, sed
+              voluptatum blanditiis harum.
+            </p>
+          </div>
+
+          <div class="about-buttons">
+            <button
+              onclick="window.location.href='mailto:charlottelouisecodes@gmail.com';"
+            >
+              Get in Touch
+            </button>
+            <button onclick="window.location.href='work.html';">My Work</button>
+          </div>
+          <section id="skills" class="mt-5">
+            <!-- ... (your existing skills section) ... -->
+          </section>
+
+          <div id="contact" class="mt-5">
+            <h2 class="text-center">📮 Contact me</h2>
+            <a href="mailto:charlottelouisecodes@gmail.com" class="email-link">
+              charlottelouisecodes@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
