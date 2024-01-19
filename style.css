@@ -177,6 +177,7 @@ header nav .list-darkmode-menu .hamburger.active .bar {
   height: 100vh;
   z-index: -1;
   padding: 300px 0 50px;
+  padding-top: 90px;
 }
 .home .home-info {
   display: flex;
