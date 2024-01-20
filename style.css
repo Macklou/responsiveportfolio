@@ -422,21 +422,3 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
-
-.container {
-  width: 80%;
-  margin: 10 auto;
-}
-
-.home,
-.about {
-  padding: 60px 0;
-}
-
-.about-header {
-  color: #f52cf9;
-}
-
-.about-circle-photo {
-  border: 2px solid #f52cf9;
-}
