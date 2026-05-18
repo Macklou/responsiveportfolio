@@ -1,0 +1,9 @@
+# Mac
+.DS_Store
+
+# Working files — logo concept drafts, Substack assets, etc.
+# These are kept locally for reference but should not be deployed with the site.
+logo-concept-*.svg
+logo-concepts.html
+margin-notes-logo*.jpg
+margin-notes-logo*.png
