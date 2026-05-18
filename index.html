@@ -2,587 +2,797 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-
-   
-
     <meta
       name="description"
-      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+      content="Louise Charlotte — researcher and consultant on digital culture and privacy. Advising universities, organisations, and media on the social dynamics of technology."
     />
+    <title>
+      Louise Charlotte — Researcher & Consultant on Digital Culture and Privacy
+    </title>
 
-    
-<meta itemprop="name" content="Louise Charlotte's Portfolio">
-<meta itemprop="description" content="Welcome to my portfolio website. I am a Front End Developer and App Developer. Please take a look around my site and get in touch.">
-
-<!-- Reference screenshot of updated site's header in place of content -->
-<meta itemprop="image" content="assets/images/sharing-card.png">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://louisecharlotte.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louise Charlotte's Portfolio">
-<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
-
-<!-- Reference screenshot of updated site's header in content -->
-<meta property="og:image" content="assets/images/sharing-card.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Louise Charlotte's Portfolio">
-<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
-
-<!-- Reference screenshot of updated site's header in content -->
-<meta name="twitter:image" content="assets/images/sharing-card.png">
-
-
-<!-- Update favicon href attribute with image of yourself -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="shortcut icon"
-      href="assets/images/favicons.png"
-      type="image/png"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
     />
 
-    <!-- Preloading fonts for better performance -->
+    <style>
+      :root {
+        --bg: #faf8f4;
+        --bg-alt: #f2efe8;
+        --ink: #1a1a1a;
+        --ink-muted: #5a5a55;
+        --ink-soft: #8a8a82;
+        --rule: #d9d4c7;
+        --accent: #8b3a2f;
+        --max: 1120px;
+      }
 
-    <link
-      rel="preload"
-      href="assets/fonts/Mona-Sans.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Louise Charlotte's Portfolio</title>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 17px;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: var(--ink);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+        transition: border-color 0.2s ease, color 0.2s ease;
+      }
+      a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* ---------- Header ---------- */
+      header.site {
+        padding: 28px 0;
+        border-bottom: 1px solid var(--rule);
+        position: sticky;
+        top: 0;
+        background: rgba(250, 248, 244, 0.92);
+        backdrop-filter: saturate(140%) blur(8px);
+        z-index: 50;
+      }
+      .site-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+      }
+      .brand {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 500;
+        font-size: 19px;
+        letter-spacing: -0.01em;
+        border: none;
+      }
+      .brand:hover {
+        color: var(--ink);
+      }
+      nav.primary ul {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+      nav.primary a {
+        border: none;
+        font-size: 15px;
+        color: var(--ink-muted);
+        font-weight: 400;
+      }
+      nav.primary a:hover {
+        color: var(--accent);
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        padding: 120px 0 100px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 28px;
+        font-weight: 500;
+      }
+      h1.hero-title {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(40px, 6vw, 68px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        max-width: 900px;
+        margin-bottom: 32px;
+      }
+      h1.hero-title em {
+        font-style: italic;
+        color: var(--accent);
+      }
+      .hero-lede {
+        font-size: 19px;
+        max-width: 640px;
+        color: var(--ink-muted);
+        line-height: 1.65;
+        margin-bottom: 40px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .btn {
+        display: inline-block;
+        padding: 13px 26px;
+        background: var(--ink);
+        color: var(--bg);
+        border: 1px solid var(--ink);
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+      }
+      .btn:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: var(--bg);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--ink);
+      }
+      .btn-ghost:hover {
+        background: var(--ink);
+        color: var(--bg);
+        border-color: var(--ink);
+      }
+
+      /* ---------- Sections ---------- */
+      section {
+        padding: 100px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      .section-head {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 64px;
+        margin-bottom: 64px;
+        align-items: baseline;
+      }
+      .section-label {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      h2 {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 400;
+        font-size: clamp(28px, 3.5vw, 40px);
+        line-height: 1.15;
+        letter-spacing: -0.015em;
+        max-width: 720px;
+      }
+
+      /* ---------- About ---------- */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 64px;
+      }
+      .about-grid > div:first-child {
+        /* photo column */
+        grid-column: 1;
+      }
+      .portrait {
+        width: 200px;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 4px;
+        filter: grayscale(20%);
+        background: var(--bg-alt);
+      }
+      .about-body {
+        max-width: 680px;
+        font-size: 18px;
+        line-height: 1.75;
+        color: var(--ink);
+      }
+      .about-body p + p {
+        margin-top: 20px;
+      }
+      .about-body p {
+        color: var(--ink-muted);
+      }
+
+      /* ---------- Research areas ---------- */
+      .areas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 64px;
+        max-width: 920px;
+      }
+      .area h3 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        letter-spacing: -0.01em;
+      }
+      .area p {
+        color: var(--ink-muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .area-num {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 14px;
+        color: var(--accent);
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      /* ---------- Consulting ---------- */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--rule);
+        border: 1px solid var(--rule);
+      }
+      .service {
+        background: var(--bg);
+        padding: 40px 32px;
+      }
+      .service h3 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 14px;
+        letter-spacing: -0.01em;
+      }
+      .service p {
+        color: var(--ink-muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .service .mark {
+        display: inline-block;
+        width: 24px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 20px;
+      }
+
+      /* ---------- Talks & Press ---------- */
+      .list-rows {
+        max-width: 880px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 120px 1fr 180px;
+        gap: 32px;
+        padding: 24px 0;
+        border-top: 1px solid var(--rule);
+        align-items: baseline;
+      }
+      .row:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+      .row-date {
+        font-size: 14px;
+        color: var(--ink-soft);
+        letter-spacing: 0.04em;
+        font-variant-numeric: tabular-nums;
+      }
+      .row-title {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: -0.005em;
+      }
+      .row-title span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        color: var(--ink-muted);
+        font-weight: 400;
+        margin-top: 4px;
+        letter-spacing: 0;
+      }
+      .row-meta {
+        font-size: 14px;
+        color: var(--ink-muted);
+        text-align: right;
+      }
+
+      /* ---------- Writing ---------- */
+      .writing {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+        max-width: 920px;
+      }
+      .write-card {
+        padding: 32px;
+        background: var(--bg-alt);
+        border-radius: 4px;
+      }
+      .write-card h3 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+      .write-card p {
+        color: var(--ink-muted);
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+      .write-card a.read {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        border-bottom: 1px solid var(--accent);
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      /* ---------- Contact ---------- */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: start;
+        max-width: 920px;
+      }
+      .contact-lede {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 28px;
+        line-height: 1.3;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+      .contact-list {
+        list-style: none;
+      }
+      .contact-list li {
+        padding: 16px 0;
+        border-top: 1px solid var(--rule);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 24px;
+      }
+      .contact-list li:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+      .contact-list .label {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      .contact-list a {
+        font-size: 16px;
+        border: none;
+      }
+      .contact-list a:hover {
+        color: var(--accent);
+      }
+
+      /* ---------- Footer ---------- */
+      footer.site {
+        padding: 48px 0 64px;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      footer a {
+        border: none;
+        color: var(--ink-muted);
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 820px) {
+        body {
+          font-size: 16px;
+        }
+        .container {
+          padding: 0 24px;
+        }
+        .hero {
+          padding: 80px 0 70px;
+        }
+        section {
+          padding: 70px 0;
+        }
+        .section-head,
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .areas {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .services {
+          grid-template-columns: 1fr;
+        }
+        .writing {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .row {
+          grid-template-columns: 1fr;
+          gap: 6px;
+          padding: 20px 0;
+        }
+        .row-meta {
+          text-align: left;
+        }
+        nav.primary ul {
+          gap: 18px;
+        }
+        nav.primary a {
+          font-size: 14px;
+        }
+        .portrait {
+          width: 160px;
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        nav.primary {
+          display: none;
+        }
+        .hero-ctas {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn {
+          text-align: center;
+        }
+      }
+    </style>
   </head>
-
   <body>
-
-    <script>
-      const theme = localStorage.getItem("theme") || "dark";
-      document.body.classList.add(theme);
-    </script>
-
-    <header class="header">
-
-      <div class="menu-btn-container">
-        <div class="container">
-          <button type="button" class="menu-btn">menu</button>
-        </div>
-      </div>
-
-      <nav class="nav hidden">
-        <ol class="nav-items">
-          <li class="nav-item"><a href="#">Home</a></li>
-          <li class="nav-item"><a href="#work">My Work</a></li>
-          <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
-          <li class="nav-item">
-            <a href="#contact" data-focused="last-focused">Contact</a>
-          </li>
-        </ol>
-      </nav>
-
-      <div class="container">
-        <div class="header-textbox">
-          <!-- Replace with your name and job title -->
-          <h1 class="h1">
-            Hi, I'm Louise Charlotte<br />
-            Frontend Developer
-          </h1>
-
-          <!-- Add a small introductory paragraph about yourself -->
-          <p class="header-text">
-            A frontend software engineer and interface designer who builds UX
-            rich accessible and performant websites and apps.
-          </p>
-
-          <div class="header-btns">
-            <a href="#contact" class="btn btn-cta">Contact me</a>
-            <a href="#work" class="btn btn-secondary">See my work</a>
-          </div>
-        </div>
+    <!-- ============= Header ============= -->
+    <header class="site">
+      <div class="container site-inner">
+        <a href="#" class="brand">Louise Charlotte</a>
+        <nav class="primary" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#consulting">Consulting</a></li>
+            <li><a href="#talks">Talks &amp; Press</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <section class="client">
-        <div class="container">
-          <h2 class="h2">Trusted by</h2>
-          <div class="logos">
-            <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/stripe.svg"
-                alt="Ideacraft"
-                class="logo hide to-top"
-              />
-
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/datastax.svg"
-                alt="Golden grid"
-                class="logo"
-              />
-
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/coke.svg"
-                alt="Theia"
-                class="logo hide to-bottom"
-              />
-            </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/gm.svg"
-                alt="General motors"
-                class="logo hide to-top"
-              />
-
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/shares.svg"
-                alt="Chippy"
-                class="logo"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/shopify.svg"
-                alt="Shopify"
-                class="logo hide to-bottom"
-              />
-            </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/agency-elevation.svg"
-                alt="Agency elevation"
-                class="logo hide to-top"
-              /><img
-                loading="lazy"
-                src="assets/images/trusted-by/gitlab.svg"
-                alt="Ron jones"
-                class="logo"
-              /><img
-                loading="lazy"
-                src="assets/images/trusted-by/duolingo.svg"
-                alt="Mighty furniture's"
-                class="logo hide to-bottom"
-              />
-            </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/coyote.svg"
-                alt="Bulls eye"
-                class="logo hide to-top"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/astrato.svg"
-                alt="Chippy"
-                class="logo"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/mercado.svg"
-                alt="Fastlane"
-                class="logo hide to-bottom"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="work">
-        <div class="container">
-          <h2 class="h2" id="work">Selected Work</h2>
-          <div class="work-boxes">
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">portfolio template</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  A free to use, minimal and accessible portfolio template for
-                  developers.
-                </p>
-                <!-- Add technologies you used to build the project -->
-                <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>SCSS</li>
-                  <li>MDX</li>
-                </ol>
-
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://github.com/devsyedmohsin" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="https://github.com/devsyedmohsin"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-
-         <!-- Update img src and alt attribute  -->
-
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/portfolio-template.webp"
-                  alt="agency elevation"
-                />
-              </picture>
-            </div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">agencyelevation.com</h3>
-                <!-- Add small description of your project  -->
-
-                <p class="work-text">Website for Agency Elevation.</p>
-                <ol class="work-technologies">
-                  <li>React</li>
-                  <li>Gatsby</li>
-                  <li>Material UI</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="#" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="http://github.com/devsyedmohsin"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/agency-elevation.webp"
-                  alt="portfolio template"
-                />
-              </picture>
-            </div>
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">contribute.dev</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  Website for DevX A dedicated space for developer experience
-                </p>
-                <ol class="work-technologies">
-                  <li>Ruby</li>
-                  <li>SvelteKit</li>
-                  <li>Emotion</li>
-                </ol>
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="#" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-              </div>
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/contribute-dev.webp"
-                  alt="contribute dev"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
-
-      <section class="article">
-        <div class="container">
-          <h2 class="h2" id="blog">My Articles</h2>
-          <div class="article-boxes">
-            <article class="article-box featured-article">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h3">
-                    22 Useful CSS Tips and Tricks Every Developer Should Know
-                  </h3>
-                  <p class="article-text">
-                    Note: All the tips, tricks shared in this article are part
-                    of my GitHub repository css tips tricks A handmade
-                    collection of pro css tips tricks for developers.
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img src="./assets/images/heart-outline.svg" alt="heart" />
-                    416
-                  </span>
-                </div>
-              </div>
-              <picture class="article-illustration">
-                <img
-                  src="assets/images/featured-blog.webp"
-                  alt="MacBook Pro"
-                  loading="lazy"
-                />
-              </picture>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">JavaScript Default Function Parameters.</h3>
-                  <p class="article-text">
-                    In JavaScript when we call a function which expects some
-                    data to be passed in if you call that without passing
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                      loading="lazy"
-                    />
-                    47
-                  </span>
-                </div>
-              </div>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">
-                    Free Open-source portfolio template for developers ✨
-                  </h3>
-                  <p class="article-text">
-                    A beautiful, minimal and accessible portfolio template for
-                    Developers which is completely free and Open Source.
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin/free-open-source-portfolio-template-for-developers-4g1d" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                      loading="lazy"
-                    />
-                    177
-                  </span>
-                </div>
-              </div>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">HTML tips and tricks.</h3>
-                  <div class="article-text">
-                    In my very last article I shared some JavaScript tips and
-                    tricks In this article I will be covering HTML tips and
-                    tricks.
-                  </div>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      loading="lazy"
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                    />
-                    350
-                  </span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
-
-      <section class="skills">
-        <div class="container">
-          <h2 class="h2" id="skills">My Toolkit</h2>
-          <div class="skills-imgs">
-                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
-                <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte">
-                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
-                 <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
-                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
-                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
-                 <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL">
-                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
-                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
-            </figure>
-          </div>
-        </div>
-      </section>
-
-
-
-      <section class="contact">
-        <div class="container">
-          <h2 class="h2" id="contact">Send Message</h2>
-          <div class="contact-content">
-            <div class="contact-textbox">
-              <!-- Please comment this component if you're not available for hire -->
-              <strong href="#" class="hire-alert">
-                <span class="indicator"></span>
-                Available for hire
-              </strong>
-              <p class="contact-text">
-                As a software engineer, I construct web interfaces and design
-                systems with a special love for accessibility and the
-                performance. I tend to code things from scratch and enjoy
-                bringing ideas to life.
-              </p>
-              <p class="contact-text">
-                I'm also an open-source developer, and in my spare time, I do
-                digital art.
-              </p>
-              <!-- Replace src with your signatures and name -->
-              <img
-                src="assets/images/signatures.png"
-                alt="Louise Charlotte"
-                class="signatures"
-                loading="lazy"
-              />
-            </div>
-            <form action="#" class="contact-form" netlify>
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  required
-                  inputmode="email"
-                />
-              </div>
-              <div class="form-field">
-                <label for="message">How can I help you?</label>
-                <textarea name="message" id="message" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-cta">Send</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
+    <!-- ============= Hero ============= -->
+    <section class="hero" id="top" style="border-bottom: 1px solid var(--rule)">
       <div class="container">
-        <div class="footer-content">
-          <!-- Update href and src attributes -->
-          <nav>
-            <ol class="footer-links">
-              <li class="footer-link">
-                <a title="GitHub" href="https://github.com/macklou" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/github.svg"
-                    alt="GitHub"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Codepen" href="https://github.com/macklou" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/codepen.svg"
-                    alt="Codepen"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Linkedin" href="https://www.linkedin.com/in/charlottelouise" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/linkedin.svg"
-                    alt="Linkedin"
-                /></a>
-              </li>
-              <li class="footer-link">
-                <a title="Twitter" href="https://github.com/macklou" target="_blank" rel="noopener"
-                  ><img
-                    loading="lazy"
-                    src="assets/images/social-links/twitter.svg"
-                    alt="Twitter"
-                /></a>
-              </li>
-            </ol>
-          </nav>
-          <p class="footer-text">
-            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/macklou">Louise Charlotte</a>
-          </p>
-          <label class="theme-switch" for="theme-switch">
-            <span>Dark Theme</span>
-            <input type="checkbox" id="theme-switch" role="switch"/>
-          </label>
+        <p class="eyebrow">Researcher · Consultant · Speaker</p>
+        <h1 class="hero-title">
+          Studying how <em>digital culture</em> reshapes the way we live, work,
+          and protect our <em>privacy</em>.
+        </h1>
+        <p class="hero-lede">
+          I work with universities, organisations, and media to make sense of
+          the social dynamics of technology — from platform behaviour and online
+          communities to data protection, surveillance, and the everyday
+          politics of being seen online.
+        </p>
+        <div class="hero-ctas">
+          <a href="#consulting" class="btn">Work with me</a>
+          <a href="#writing" class="btn btn-ghost">Read my writing</a>
         </div>
       </div>
+    </section>
+
+    <!-- ============= About ============= -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">About</span>
+          <h2>
+            An independent researcher working at the intersection of culture,
+            technology, and privacy.
+          </h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <img
+              src="https://louisecharlotte.com/images/picture.png"
+              alt="Portrait of Louise Charlotte"
+              class="portrait"
+            />
+          </div>
+          <div class="about-body">
+            <p>
+              I'm Louise — a researcher and consultant focused on the cultural
+              and ethical dimensions of digital life. My work asks how
+              platforms, data systems, and online communities are reshaping
+              public discourse, identity, and the boundaries of personal
+              privacy.
+            </p>
+            <p>
+              I partner with universities and professional institutions to study
+              the evolving digital culture landscape, and I advise organisations
+              navigating the practical and reputational questions that come with
+              operating in it. I write, present, and teach on these themes
+              regularly, and I take particular interest in how policy, design,
+              and everyday user behaviour collide in real-world contexts.
+            </p>
+            <p>
+              Outside of formal research, I write a regular Substack on
+              technology, culture, and the slow work of taking privacy
+              seriously.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Research areas ============= -->
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Research</span>
+          <h2>What I work on</h2>
+        </div>
+        <div class="areas">
+          <div class="area">
+            <span class="area-num">01</span>
+            <h3>Digital culture &amp; online communities</h3>
+            <p>
+              How platforms shape public discourse, identity, aesthetics, and
+              the social norms of participating in digital life — including the
+              role of subcultures, creators, and algorithmic visibility.
+            </p>
+          </div>
+          <div class="area">
+            <span class="area-num">02</span>
+            <h3>Privacy, surveillance &amp; data</h3>
+            <p>
+              The everyday and structural dimensions of privacy — from data
+              protection and consent to surveillance practices, AI-driven
+              inference, and the cultural meaning of being watched.
+            </p>
+          </div>
+          <div class="area">
+            <span class="area-num">03</span>
+            <h3>Technology &amp; society</h3>
+            <p>
+              How emerging technologies — from generative AI to platform
+              governance — interact with policy, institutions, and public life
+              across different cultural contexts.
+            </p>
+          </div>
+          <div class="area">
+            <span class="area-num">04</span>
+            <h3>Cross-cultural digital dynamics</h3>
+            <p>
+              Comparative work on how digital culture differs across regions,
+              with attention to globalisation, language, and the uneven
+              distribution of digital power.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Consulting ============= -->
+    <section id="consulting">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Consulting</span>
+          <h2>How I work with organisations.</h2>
+        </div>
+        <div class="services">
+          <div class="service">
+            <span class="mark"></span>
+            <h3>Advisory &amp; strategy</h3>
+            <p>
+              Helping teams think through the cultural, ethical, and privacy
+              implications of new products, policies, or communications — from
+              initial framing to stakeholder engagement.
+            </p>
+          </div>
+          <div class="service">
+            <span class="mark"></span>
+            <h3>Research &amp; reports</h3>
+            <p>
+              Bespoke qualitative research, landscape reviews, and written
+              reports on digital culture, platform behaviour, and
+              privacy-related questions specific to your sector.
+            </p>
+          </div>
+          <div class="service">
+            <span class="mark"></span>
+            <h3>Talks &amp; workshops</h3>
+            <p>
+              Keynotes, panels, and tailored workshops for academic, corporate,
+              and policy audiences. Recent themes include privacy literacy, AI
+              governance, and platform culture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Talks & Press ============= -->
+    <section id="talks">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Talks &amp; Press</span>
+          <h2>Selected speaking engagements and media.</h2>
+        </div>
+        <div class="list-rows">
+          <!-- Placeholder rows — replace with real entries -->
+          <div class="row">
+            <div class="row-date">2026</div>
+            <div class="row-title">
+              [Talk title — e.g. "The Quiet Politics of Privacy"]
+              <span>Keynote · [Venue / Conference]</span>
+            </div>
+            <div class="row-meta">Talk</div>
+          </div>
+          <div class="row">
+            <div class="row-date">2025</div>
+            <div class="row-title">
+              [Panel title — e.g. "Platform Governance in 2025"]
+              <span>Panel · [University / Institution]</span>
+            </div>
+            <div class="row-meta">Panel</div>
+          </div>
+          <div class="row">
+            <div class="row-date">2025</div>
+            <div class="row-title">
+              [Press feature — e.g. quoted in The Guardian on data ethics]
+              <span>[Outlet] · <a href="#">Read</a></span>
+            </div>
+            <div class="row-meta">Press</div>
+          </div>
+          <div class="row">
+            <div class="row-date">2024</div>
+            <div class="row-title">
+              [Workshop title]
+              <span>Workshop · [Host organisation]</span>
+            </div>
+            <div class="row-meta">Workshop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Writing ============= -->
+    <section id="writing">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Writing</span>
+          <h2>Essays, publications, and field notes.</h2>
+        </div>
+        <div class="writing">
+          <div class="write-card">
+            <h3>Substack</h3>
+            <p>
+              A regular newsletter on digital culture, privacy, and the everyday
+              texture of life online. Long-form essays, reading notes, and
+              occasional dispatches from the field.
+            </p>
+            <a href="#" class="read">Read the newsletter →</a>
+          </div>
+          <div class="write-card">
+            <h3>Selected publications</h3>
+            <p>
+              Academic and trade publications on platform culture, surveillance,
+              and cross-cultural digital practice. Full list available on
+              request.
+            </p>
+            <a href="#" class="read">View CV →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Contact ============= -->
+    <section id="contact" style="border-bottom: none">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Contact</span>
+          <h2>Get in touch.</h2>
+        </div>
+        <div class="contact-grid">
+          <p class="contact-lede">
+            For consulting enquiries, speaking invitations, or research
+            collaborations — I'd love to hear from you.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="label">Email</span>
+              <a href="mailto:louise@nexelence.com">louise@nexelence.com</a>
+            </li>
+            <li>
+              <span class="label">WhatsApp</span>
+              <a
+                href="https://wa.me/447874423067?text=Hi%20Louise%20—%20let's%20connect"
+                >+44 7874 423067</a
+              >
+            </li>
+            <li>
+              <span class="label">Substack</span>
+              <a href="#">Read the newsletter</a>
+            </li>
+            <li>
+              <span class="label">CV</span>
+              <a href="#">View / download</a>
+            </li>
+            <li>
+              <span class="label">Instagram</span>
+              <a href="#">@handle</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Footer ============= -->
+    <footer class="site">
+      <div class="container footer-inner">
+        <span
+          >© <span id="year"></span> Louise Charlotte. All rights
+          reserved.</span
+        >
+        <span><a href="#top">Back to top ↑</a></span>
+      </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
