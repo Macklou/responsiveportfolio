@@ -366,6 +366,41 @@
         color: var(--accent);
         font-weight: 500;
       }
+      .pub-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .pub-list li {
+        border-top: 1px solid var(--rule);
+        padding-top: 18px;
+      }
+      .pub-list li:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+      .pub-list a {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -0.005em;
+        border: none;
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink);
+      }
+      .pub-list a:hover {
+        color: var(--accent);
+      }
+      .pub-list .outlet {
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
 
       /* ---------- Contact ---------- */
       .contact-grid {
@@ -724,16 +759,38 @@
               texture of life online. Long-form essays, reading notes, and
               occasional dispatches from the field.
             </p>
-            <a href="#" class="read">Read the newsletter →</a>
+            <a
+              href="https://louisemackin.substack.com/"
+              class="read"
+              target="_blank"
+              rel="noopener"
+              >Read the newsletter →</a
+            >
           </div>
           <div class="write-card">
             <h3>Selected publications</h3>
-            <p>
-              Academic and trade publications on platform culture, surveillance,
-              and cross-cultural digital practice. Full list available on
-              request.
-            </p>
-            <a href="#" class="read">View CV →</a>
+            <ul class="pub-list">
+              <li>
+                <a
+                  href="https://www.kcl.ac.uk/the-met-polices-facial-recognition-cameras-dont-see-all-faces-equally-and-thats-not-a-glitch"
+                  target="_blank"
+                  rel="noopener"
+                  >The Met Police's facial recognition cameras don't see all
+                  faces equally — and that's not a glitch</a
+                >
+                <span class="outlet">King's College London</span>
+              </li>
+              <li>
+                <a
+                  href="https://www.kcl.ac.uk/kneecap-language-rebellion-and-masculinity-in-post-conflict-northern-ireland"
+                  target="_blank"
+                  rel="noopener"
+                  >Kneecap: language, rebellion and masculinity in post-conflict
+                  Northern Ireland</a
+                >
+                <span class="outlet">King's College London</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -765,7 +822,12 @@
             </li>
             <li>
               <span class="label">Substack</span>
-              <a href="#">Read the newsletter</a>
+              <a
+                href="https://louisemackin.substack.com/"
+                target="_blank"
+                rel="noopener"
+                >Read the newsletter</a
+              >
             </li>
             <li>
               <span class="label">CV</span>
