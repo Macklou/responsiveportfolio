@@ -7,3 +7,6 @@ logo-concept-*.svg
 logo-concepts.html
 margin-notes-logo*.jpg
 margin-notes-logo*.png
+
+# Local-only workflow reference (not part of the site)
+SITE-WORKFLOW.md
